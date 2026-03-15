@@ -5,14 +5,16 @@ class GameSettings{
 private:
 
 enum class GameState{
-	Menu,
 	Loading,
-	InGame,
-	Pause
+	Menu,
+	Pause,
+	InGame
 };
 
 GameState state;
 
 public:
 	GameSettings();
+	int getGameState();
+	int setGameState(int mode);
 };

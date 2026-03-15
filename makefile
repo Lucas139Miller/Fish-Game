@@ -13,13 +13,15 @@ BIN = bin
 all: setup ${BIN}/${TARGET}
 
 #LINKING
-${BIN}/${TARGET}: ${BUILD}/main.o
+${BIN}/${TARGET}: ${BUILD}/main.o ${BUILD}/GameSettings.o
 	${CC} ${BUILD}/*.o -o ${BIN}/${TARGET}
 
 
 #COMPILING
-${BUILD}/main.o:
-	${CC} -c ${SRC}/main.cpp -o ${BUILD}/main.o
+${BUILD}/main.o: ${SRC}/main.cpp
+	${CC} -c -I${INCLUDE} ${SRC}/main.cpp -o ${BUILD}/main.o
+${BUILD}/GameSettings.o: ${SRC}/GameSettings.cpp
+	${CC} -c -I${INCLUDE} ${SRC}/GameSettings.cpp -o ${BUILD}/GameSettings.o
 
 
 #PRE CONFIGURATION
@@ -31,4 +33,4 @@ setup:
 run: 
 	${BIN}/${TARGET}
 
-#Ms, Libélulas, Superman
+#Ms, Libélulas, Superman, V

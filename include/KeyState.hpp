@@ -8,4 +8,4 @@ public:
 	KeyState();
 	bool check(std::string key);
 	bool change(std::string key, bool value);
-};
+}; 

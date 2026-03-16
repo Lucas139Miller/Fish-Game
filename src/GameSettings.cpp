@@ -12,7 +12,7 @@ GameSettings::GameSettings(){
 	std::cout << "Ativada\n";
 }
 
-int GameSettings::getGameState(){
+int GameSettings::get_GameState(){
 	int mode;
 	switch(this->state){
 		case GameState::Loading:
@@ -34,7 +34,7 @@ int GameSettings::getGameState(){
 	return mode;
 }
 
-int GameSettings::setGameState(int mode){
+int GameSettings::set_GameState(int mode){
 	switch(mode){
 		case 0:
 			this->state = GameState::Loading;
@@ -52,6 +52,6 @@ int GameSettings::setGameState(int mode){
 			return -1;
 	}
 
-	return 0;
+	return 1;
 
 };

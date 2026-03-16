@@ -15,6 +15,6 @@ GameState state;
 
 public:
 	GameSettings();
-	int getGameState();
-	int setGameState(int mode);
+	int get_GameState();
+	int set_GameState(int mode);
 };

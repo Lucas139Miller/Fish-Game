@@ -22,6 +22,10 @@ ${BUILD}/main.o: ${SRC}/main.cpp
 	${CC} -c -I${INCLUDE} ${SRC}/main.cpp -o ${BUILD}/main.o
 ${BUILD}/GameSettings.o: ${SRC}/GameSettings.cpp
 	${CC} -c -I${INCLUDE} ${SRC}/GameSettings.cpp -o ${BUILD}/GameSettings.o
+${BUILD}/Player.o: ${SRC}/Player.cpp
+	${CC} -c -I${INCLUDE} ${SRC}/Player.cpp -o ${BUILD}/Player.o
+${BUILD}/KeyState.o: ${SRC}/KeyState.cpp
+	${CC} -c -I${INCLUDE} ${SRC}/KeyState.cpp -o ${BUILD}/KeyState.o
 
 
 #PRE CONFIGURATION

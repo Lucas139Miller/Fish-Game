@@ -41,3 +41,11 @@ bool Player::add_position(char coordinate, int value){
 	}
 	return true;
 }
+bool Player::get_damage(int value){
+	this->health=-value;
+	if(health <= 0){
+		return 1;//dead
+	}else{
+		return 0;//alive
+	}
+}

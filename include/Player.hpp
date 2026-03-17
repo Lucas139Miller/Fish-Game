@@ -10,4 +10,5 @@ public:
 	int get_position(char coordinate);
 	bool set_position(char coordinate, int value);
 	bool add_position(char coordinate, int value);
+	bool get_damage(int value);
 };

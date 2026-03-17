@@ -1,4 +1,4 @@
-#include "Keystate.hpp"
+#include "KeyState.hpp"
 
 KeyState::KeyState():w(false),a(false),s(false),d(false){}
 bool KeyState::check(std::string key){
@@ -12,6 +12,7 @@ bool KeyState::check(std::string key){
 		return this->d;
 	}else{
 		std::cout << "tecla não encontrada!\n";
+		return 0;
 	}
 }
 bool KeyState::change(std::string key, bool value){

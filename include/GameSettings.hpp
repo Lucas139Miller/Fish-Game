@@ -10,7 +10,6 @@ enum class GameState{
 	Pause,
 	InGame
 };
-
 GameState state;
 
 public:

@@ -13,7 +13,7 @@ BIN = bin
 all: setup ${BIN}/${TARGET}
 
 #LINKING
-${BIN}/${TARGET}: ${BUILD}/main.o ${BUILD}/GameSettings.o
+${BIN}/${TARGET}: ${BUILD}/main.o ${BUILD}/GameSettings.o ${BUILD}/Player.o ${BUILD}/KeyState.o
 	${CC} ${BUILD}/*.o -o ${BIN}/${TARGET}
 
 
